@@ -9,7 +9,7 @@ const TodoList = () => {
     const todos = useSelector(store => store.todos);
     return(
         <div>
-            {todos.map(t => <Todo key={t.id} id={t.id} text={t.text} isComplete={t.isComplete} />)}
+            {todos && todos.map(t => <Todo key={t.id} id={t.id} text={t.text} isComplete={t.isComplete} />)}
         </div>
     )
 }
